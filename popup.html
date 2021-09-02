@@ -2,43 +2,42 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <style media="screen">
-      body{
-        width:240px;
-        height:220px;
+      .container {
+        width: 360px;
+        height: 240px;
+        margin : 10px 10px 10px 10px;
+        text-align: center;
       }
-      #down {
-        float : right;
-        color : white;
-        text-decoration : none;
-        background-color : lightblue;
-        width : 65px;
-        height : 16px;
-        text-align : center;
+      #contents {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+        height: 80%;
       }
-      .btn-tool {
-        margin-top : 30px;
-        margin-left : 85px;
+      #length {
+        margin-top: 5px;
       }
-      button {
-        background-color : black;
-        border : 1px solid black;
-        border-radius : 5px;
-        color : white;
-      }
-      #btnL {
-        margin-right : 10px;
+      img {
+        object-fit: cover;
+        width:70%;
+        height:70%;
       }
     </style>
     <title></title>
   </head>
   <body>
-    <div id="contents"></div>
-    <div id="length"></div>
-    <a href="" id="down" download target="_blank"></a>
-    <div class="btn-tool">
-    <button type="button" id="btnL" class"btn" name="btnL">◀</button>
-    <button type="button" id="btnR" class"btn" name="btnR">▶</button>
+    <div class="container">
+      <div id="contents"></div>
+      <div class="row">
+        <button type="button" id="btnL" class="col btn btn-outline-secondary" name="btnL"><</button>
+        <button type="button" id="btnR" class="col btn btn-outline-secondary" name="btnR">></button>
+        <div id="length" class="col"></div>
+        <a href="" id="down" class="col btn btn-outline-info" download target="_blank"></a>
+      </div>
     </div>
     <script src="script.js"></script>
   </body>

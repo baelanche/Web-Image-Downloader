@@ -11,16 +11,16 @@ function findImg(){
   chrome.tabs.executeScript({
       code:'document.querySelectorAll("img")[' + i + '].src;'
     }, function(result){
-      if(imglength != undefined){
+      if(imglength != undefined && imglength != 0){
         var src = result;
         var page = i+1;
-        document.querySelector('#contents').innerHTML = "<img src='" + src + "' width=240 height=160>";
+        document.querySelector('#contents').innerHTML = "<img src='" + src + "'>";
         document.querySelector('#length').innerHTML = "<span>" + page + "/" + imglength + "</span>";
         document.querySelector('#down').href = src;
-        document.querySelector('#down').innerText = "다운로드";
+        document.querySelector('#down').innerText = "Download";
       }
       else{
-        document.querySelector('#contents').innerHTML = "<h3>현재 페이지에 이미지가 없습니다</h3>";
+        document.querySelector('#contents').innerHTML = "<h3>No image</h3>";
         document.querySelector('#down').style.visibility = "hidden";
         document.querySelector('#btnL').style.visibility = "hidden";
         document.querySelector('#btnR').style.visibility = "hidden";
