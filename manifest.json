@@ -3,7 +3,7 @@
 
   "name": "Web Image Downloader",
   "description": "웹의 사진을 다운로드 할 수 있는 기능을 가진 애플리케이션 입니다.",
-  "version": "1.0",
+  "version": "2.0",
 
   "browser_action": {
     "default_icon": "icon.png",
