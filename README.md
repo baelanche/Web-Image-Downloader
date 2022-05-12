@@ -1,6 +1,6 @@
-# 크롬 익스텐션 튜토리얼용 프로그램
+# Google chrome extension program
 
-### thumbnail
+## thumbnail
 ![thumbname](./image/thumbnail.png)
 
 ### to do(maybe this work will be never updated forever) 
